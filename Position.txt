@@ -1,0 +1,44 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Anna Lagger"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.38881206512451,
+          48.21777468054901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Natasa Hodzic-Srndic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.369457244873047,
+          48.21048970218907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Enike Husak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.38482093811035,
+          48.20248146453242
+        ]
+      }
+    }
+  ]
+}
