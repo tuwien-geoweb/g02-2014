@@ -1,7 +1,8 @@
 <head><title>geoweb.m10 - Feedback</title></head>
+<body>
 <h2>Feedback-Formular</h2>
+<form action="javascript:submitForm();">
 
-<form method="POST" action="feedback_send.php">
   <input type="radio" name="geschlecht" value="Frau"/> Frau
   <input type="radio" name="geschlecht" value="Herr"/> Herr<br />
   <table>
@@ -26,7 +27,11 @@
   und in der Projekt-Datenbank gespeichert.<br /><br />
   <br />
 </form>
+<script src="http://openlayers.org/en/v3.0.0/build/ol.js"></script>
+<script src="http://bit.ly/11ymsFZ"></script>
+<script>
+  featureType = "feedback";
+  featureNS = "http://geoweb/2014/g02";
+</script>
+</body>
 
-<p>geoweb.m10 (JB), Beispiel ausgehend von<br />
-<a href="http://www.thesitewizard.com/archive/feedbackphp.shtml" 
-target="_blank"> PHP Tutorial: Feedback Form Script</a> </p>
