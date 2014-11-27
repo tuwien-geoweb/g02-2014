@@ -31,12 +31,12 @@ var map = new ol.Map({
 target: 'map',
 layers: [
 new ol.layer.Tile({
-source: new ol.source.MapQuest({layer: 'oms'})
+source: new ol.source.MapQuest({layer: 'osm'})
 }),
 new ol.layer.Tile({
 source: new ol.source.TileWMS({
 url: "'http://student.ifip.tuwien.ac.at/geowerver/wms',
-params: {LAYERS: 'g02_2014:feedback', TRANSPARENT: true, FORMAT: 'image/png'}
+params: {VERSION: 1.1.1., LAYERS: 'g02_2014:feedback', TRANSPARENT: true, FORMAT: 'image/png'}
 })
 })
 ],
