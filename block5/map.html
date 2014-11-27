@@ -21,7 +21,7 @@ height: 100%;
 </div>
 <div class="col-md-4">
    <form id="search">
-     Search: <input type="text" size="40">
+     Search: <input name="query" type="text" size="40">
    </form>
   
 </div>
@@ -48,8 +48,10 @@ geolocation.setTracking(false);
 map.getView().setCenter(geolocation.getPosition());
 });
 
-function search () {
-  var url = 'http://nominatim.openstreetmap.org/search?q=Vienna+University+of+Technology&format=json';
+var form = document.getElementById("search");
+
+form.onsubmit = function() {
+  var url = 'http://nominatim.openstreetmap.org/search?format=json&q=' + form.query.value;
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr. onload = function (){
@@ -58,9 +60,9 @@ function search () {
     map.getView ().setCenter(ol.proj.transform(position, 'EPSG:4326', 'EPSG:3857'));
 };
 xhr.send();
-console.log(result);
 }
 
+ 
 </script>
 </body>
 </html>
