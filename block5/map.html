@@ -27,17 +27,18 @@ height: 100%;
 </div>
 </div>
 <script type="text/javascript">
-var vectorSource = new ol.source.Vector({
-   features: [marker]
-  })
+var marker = new ol.Feature();
 var map = new ol.Map({
 target: 'map',
 layers: [
 new ol.layer.Tile({
 source: new ol.source.MapQuest({layer: 'osm'})
 }),
-new ol.layer.Tile({
-source: new.ol.source.Vector
+new ol.layer.Vector({
+source: new.ol.source.Vector({
+   features: [marker]
+})
+})
 ],
 view: new ol.View({
 center: ol.proj.transform([16.3, 48.2], 'EPSG:4326', 'EPSG:3857'),
