@@ -60,7 +60,7 @@ form.onsubmit = function(evt) {
     var extent = [parseFloat(bbox[2]), parseFloat(bbox[0]), 
                  parseFloat(bbox[3]), parseFloat(bbox[1])
                  ]; /**@type (ol.Extent) */
-    map.getView ().fitExtent(ol.proj.transformExtent(extent, 'EPSG:4326', 'EPSG:3857'));
+    map.getView ().fitExtent(ol.proj.transformExtent(extent, 'EPSG:4326', 'EPSG:3857'), map.getSize());
 };
 xhr.send();
 }
