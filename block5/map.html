@@ -54,9 +54,9 @@ form.onsubmit = function(evt) {
   var url = 'http://nominatim.openstreetmap.org/search?format=json&q=' + form.query.value;
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
-  xhr. onload = function (){
+  xhr. onload = function() {
     var result = JSON.parse(xhr.responseText);
-    var position = [result[0].lon, result[0].lat]; /**@type (ol.coordinate) */
+    var position = [parsefloat(result[0].lon), parsefloat(result[0].lat)]; /**@type (ol.coordinate) */
     map.getView ().setCenter(ol.proj.transform(position, 'EPSG:4326', 'EPSG:3857'));
 };
 xhr.send();
