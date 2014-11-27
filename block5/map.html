@@ -42,7 +42,8 @@ var geolocation = new ol.Geolocation({
 });
 geolocation.setTracking(true); // here the browser may ask for confirmation
 geolocation.on('change:position', function() {
-  console.log(geolocation.getPosition());
+  geolocation.setTracking(false);
+  map.getView().setCenter();geolocation.getPosition());
 });
 </script>
 </body>
