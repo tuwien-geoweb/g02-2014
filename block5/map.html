@@ -38,7 +38,7 @@ zoom: 11
 })
 });
 var geolocation = new ol.Geolocation({
-  prejection: "EPSG: 4326"
+  projection: "EPSG: 4326"
 });
 geolocation.setTracking(true); // here the browser may ask for confirmation
 geolocation.on('change:position', function() {
