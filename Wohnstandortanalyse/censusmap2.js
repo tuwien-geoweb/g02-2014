@@ -39,6 +39,48 @@ $('#topics').change(function() {
   });
 });
 
+// Create an ol.Overlay with a popup anchored to the map
+var popup = new ol.Overlay({
+  element: $('#popup')
+});
+olMap.addOverlay(popup);
+
+// Handle map clicks to send a GetFeatureInfo request and open the popup
+olMap.on('singleclick', function(evt) {
+  var view = olMap.getView();
+  var url = wmsLayer.getSource().getGetFeatureInfoUrl(evt.coordinate,
+      view.getResolution(), view.getProjection(), {'INFO_FORMAT': 'text/html'});
+  popup.setPosition(evt.coordinate);
+  $('#popup-content iframe').attr('src', url);
+  $('#popup')
+    .popover({content: function() { return $('#popup-content').html(); }})
+    .popover('show');
+  // Close popup when user clicks on the 'x'
+  $('.popover-title').click(function() {
+    $('#popup').popover('hide');
+  });
+  
+  $('.popover form')[0].onsubmit = function(e) {
+  var feature = new ol.Feature();
+  feature.setGeometryName('geom');
+  feature.setGeometry(new ol.geom.Point(evt.coordinate));
+  feature.set('comment', this.comment.value);
+  var xml = new ol.format.WFS().writeTransaction([feature], null, null, {
+    featureType: 'comments', featureNS: 'http://geoweb/2014/g06',
+    gmlOptions: {srsName: 'EPSG:3857'}
+  });
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://student.ifip.tuwien.ac.at/geoserver/wfs', true);
+  xhr.onload = function() {
+    wmsLayer.getSource().updateParams({});
+    alert('Thanks for your comment.');
+  };
+  xhr.send(new XMLSerializer().serializeToString(xml));
+  e.preventDefault();
+};
+
+});
+
 // Submit query to Nominatim and zoom map to the result's extent
 var form = document.forms[0];
 form.onsubmit = function(evt) {
