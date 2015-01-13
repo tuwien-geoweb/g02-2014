@@ -103,7 +103,7 @@ form.onsubmit = function(evt) {
 
 var carsharing = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Carsharing&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:normalized_1&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
