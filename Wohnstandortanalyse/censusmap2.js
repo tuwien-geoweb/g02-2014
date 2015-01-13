@@ -62,7 +62,7 @@ olMap.on('singleclick', function(evt) {
   
   $('.popover form')[0].onsubmit = function(e) {
   var feature = new ol.Feature();
-  feature.setGeometryName('geom');
+  feature.setGeometryName('Geometry');
   feature.setGeometry(new ol.geom.Point(evt.coordinate));
   feature.set('comment', this.comment.value);
   var xml = new ol.format.WFS().writeTransaction([feature], null, null, {
