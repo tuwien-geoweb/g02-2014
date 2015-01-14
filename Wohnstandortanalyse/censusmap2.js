@@ -199,4 +199,4 @@ document.getElementById('Bezirksgrenzen').onclick = function(e){
   }else{
     olMap.removeLayer(Bezirksgrenzen);
   }
-};
+}; 
