@@ -141,3 +141,42 @@ document.getElementById('haltestellen').onclick = function(e){
   }
 };
 
+var Hundezonen = new ol.layer.Vector({
+  source: new ol.source.GeoJSON({
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Hundezonen&maxFeatures=50&outputFormat=json',
+  projection: 'EPSG:3857'
+}),
+ style: new ol.style.Style({
+       image: new ol.style.Icon({
+          src: '/htdocs/g02/Datensaetze/g02_hundezonen/hundezonen.png',
+        })
+      
+    })
+}); 
+document.getElementById('Hundezonen').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(Hundezonen);
+  }else{
+    olMap.removeLayer(Hundezonen);
+  }
+};
+
+var Radwege = new ol.layer.Vector({
+  source: new ol.source.GeoJSON({
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:RADWEGEOGDLine&maxFeatures=50&outputFormat=json',
+  projection: 'EPSG:3857'
+}),
+ style: new ol.style.Style({
+       image: new ol.style.Icon({
+          src: '/htdocs/g02/Datensaetze/g02_Radwege/Radwege.png',
+        })
+      
+    })
+}); 
+document.getElementById('Radwege').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(Radwege);
+  }else{
+    olMap.removeLayer(Radwege);
+  }
+};
