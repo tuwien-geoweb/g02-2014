@@ -108,7 +108,7 @@ var carsharing = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: '/htdocs/g02/Datensaetze/g02_carsharing/carsharing.png',
+          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_carsharing/carsharing.png',
         })
       
     })
