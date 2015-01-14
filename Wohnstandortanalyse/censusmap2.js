@@ -113,3 +113,31 @@ var carsharing = new ol.layer.Vector({
       
     })
 }); 
+document.getElementById('carsharing').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(Carsharing);
+  }else{
+    olMap.removeLayer(Carsharing);
+  }
+};
+
+var Haltestellen = new ol.layer.Vector({
+  source: new ol.source.GeoJSON({
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Haltestellen&maxFeatures=50&outputFormat=json',
+  projection: 'EPSG:3857'
+}),
+ style: new ol.style.Style({
+       image: new ol.style.Icon({
+          src: '/htdocs/g02/Datensaetze/g02_haltestellen/haltestellen.png',
+        })
+      
+    })
+}); 
+document.getElementById('haltestellen').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(Haltestellen);
+  }else{
+    olMap.removeLayer(Haltestellen);
+  }
+};
+
