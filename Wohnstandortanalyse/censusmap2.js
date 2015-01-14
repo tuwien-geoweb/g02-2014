@@ -118,7 +118,7 @@ document.getElementById('carsharing').onclick = function(e){
     olMap.addLayer(Carsharing);
   }else{
     olMap.removeLayer(Carsharing);
-  }
+  } 
 };
 
 var Haltestellen = new ol.layer.Vector({
