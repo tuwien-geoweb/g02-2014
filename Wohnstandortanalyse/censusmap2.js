@@ -128,7 +128,7 @@ var Haltestellen = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: '/htdocs/g02/Datensaetze/g02_haltestellen/haltestellen.png',
+          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_haltestellen/haltestellen.png',
         })
       
     })
@@ -148,7 +148,7 @@ var Hundezonen = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: '/htdocs/g02/Datensaetze/g02_hundezonen/hundezonen.png',
+          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_hundezonen/hundezonen.png',
         })
       
     })
@@ -168,7 +168,7 @@ var Radwege = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: '/htdocs/g02/Datensaetze/g02_Radwege/Radwege.png',
+          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_Radwege/Radwege.png',
         })
       
     })
@@ -188,7 +188,7 @@ var Bezirksgrenzen = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: '/htdocs/g02/Datensaetze/g02_Bezirksgrenzen/Bezirksgrenzen.png',
+          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_Bezirksgrenzen/Bezirksgrenzen.png',
         })
       
     })
