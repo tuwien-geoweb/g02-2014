@@ -66,7 +66,7 @@ olMap.on('singleclick', function(evt) {
   feature.setGeometry(new ol.geom.Point(evt.coordinate));
   feature.set('comment', this.comment.value);
   var xml = new ol.format.WFS().writeTransaction([feature], null, null, {
-    featureType: 'comments', featureNS: 'http://geoweb/2014/g06',
+    featureType: 'comments', featureNS: 'http://geoweb/2014/g02',
     gmlOptions: {srsName: 'EPSG:3857'}
   });
   var xhr = new XMLHttpRequest();
