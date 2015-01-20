@@ -58,8 +58,6 @@ olMap.addOverlay(popup);
           console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
           });
       }     
-     zuruck();
-   
       
 // Handle map clicks to send a GetFeatureInfo request and open the popup
 olMap.on('singleclick', function(evt) {
