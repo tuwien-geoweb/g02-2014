@@ -85,28 +85,8 @@ var marker = new ol.Feature();
           marker.setGeometry(new ol.geom.Point(map.getView().getCenter()));
           });
       }     
-     var form = document.getElementById('search'); 
-     
      zuruck();
-     
-     form.onsubmit = function search(evt) {
-      evt.preventDefault();
-      var url = 'http://nominatim.openstreetmap.org/search?&format=json&q=' + form.query.value;  
-      var xhr = new XMLHttpRequest();
-      xhr.open("GET", url, true);
-      xhr.onload = function() {
-        var result = JSON.parse(xhr.responseText);
-        var bbox = result[0].boundingbox;
-        var extent = [
-			parseFloat(bbox[2]), parseFloat(bbox[0]), 
-			parseFloat(bbox[3]), parseFloat(bbox[1])
-			];
-        map.getView().fitExtent(ol.proj.transformExtent(extent, 'EPSG:4326', 'EPSG:3857'), map.getSize());
-        marker.setGeometry(new ol.geom.Point(map.getView().getCenter()));  
-          
-      };
-      xhr.send();
-      }
+   
       
 // Handle map clicks to send a GetFeatureInfo request and open the popup
 olMap.on('singleclick', function(evt) {
