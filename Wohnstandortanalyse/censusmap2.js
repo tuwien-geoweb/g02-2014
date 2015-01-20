@@ -63,7 +63,7 @@ var marker = new ol.Feature();
               anchorXUnits: 'fraction',
               anchorYUnits: 'pixels',
               opacity: 0.75,
-              src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/homepage/human.png'
+              src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/homepage/map_standortsuche/human.png'
               }))
             })
           })
