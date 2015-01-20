@@ -45,35 +45,8 @@ var popup = new ol.Overlay({
 });
 olMap.addOverlay(popup);
 
-//Create marker for location
-var marker = new ol.Feature();
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.MapQuest({layer: 'osm'})
-          }),
-          new ol.layer.Vector({
-            source: new ol.source.Vector ({
-              features: [marker]
-            }),
-            style: new ol.style.Style({
-            image: new ol.style.Icon(({
-              anchor: [0.5, 46],
-              anchorXUnits: 'fraction',
-              anchorYUnits: 'pixels',
-              opacity: 0.75,
-              src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/homepage/map_standortsuche/human.png'
-              }))
-            })
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.transform([16.3, 48.2], 'EPSG:4326', 'EPSG:3857'),
-          zoom: 11,
-          maxZoom: 19,
-        })
-      });
+//Go to location
+
       function zuruck() {       
           var geolocation = new ol.Geolocation({
             projection: 'EPSG:3857'
