@@ -52,10 +52,10 @@ olMap.addOverlay(popup);
             projection: 'EPSG:3857'
           });
           geolocation.setTracking(true);
-          geolocation.on('change:position', function() {
+          geolocation.on('change', function() {
           geolocation.setTracking(false);
-          map.getView().setCenter(geolocation.getPosition());
-          marker.setGeometry(new ol.geom.Point(map.getView().getCenter()));
+          map.getView().fitGeometry(geolocation.getAccuracyGeometry(), map.getSize(), { nearest: true, maxZoom: 19 });
+          console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
           });
       }     
      zuruck();
