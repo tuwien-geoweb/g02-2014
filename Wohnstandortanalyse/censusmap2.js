@@ -110,7 +110,7 @@ form.onsubmit = function(evt) {
           geolocation.setTracking(true);
           geolocation.on('change', function() {
           geolocation.setTracking(false);
-          olMap.getView().fitGeometry(geolocation.getAccuracyGeometry(), olMap.getSize(), { nearest: true, maxZoom: 19 });
+          olMap.getView().fitGeometry(geolocation.getAccuracyGeometry(), olMap.getSize(), {maxZoom: 19 });
           marker.setGeometry(new ol.geom.Point(olMap.getView().getCenter()));
           //console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
           });
