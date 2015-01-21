@@ -55,7 +55,8 @@ olMap.addOverlay(popup);
           geolocation.on('change', function() {
           geolocation.setTracking(false);
           map.getView().fitGeometry(geolocation.getAccuracyGeometry(), map.getSize(), { nearest: true, maxZoom: 19 });
-          console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
+          marker.setGeometry(new ol.geom.Point(olMap.getView().getCenter()));
+          //console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
           });
       }     
       
