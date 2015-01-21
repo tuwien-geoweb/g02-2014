@@ -45,21 +45,6 @@ var popup = new ol.Overlay({
 });
 olMap.addOverlay(popup);
 
-//Go to location
-
-      function zuruck() {       
-          var geolocation = new ol.Geolocation({
-            projection: 'EPSG:3857'
-          });
-          geolocation.setTracking(true);
-          geolocation.on('change', function() {
-          geolocation.setTracking(false);
-          olMap.getView().fitGeometry(geolocation.getAccuracyGeometry(), olMap.getSize(), { nearest: true, maxZoom: 19 });
-          marker.setGeometry(new ol.geom.Point(olMap.getView().getCenter()));
-          //console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
-          });
-      }     
-      
 // Handle map clicks to send a GetFeatureInfo request and open the popup
 olMap.on('singleclick', function(evt) {
   var view = olMap.getView();
@@ -116,6 +101,21 @@ form.onsubmit = function(evt) {
   evt.preventDefault();
 };
 
+//Go to location
+
+      function zuruck() {       
+          var geolocation = new ol.Geolocation({
+            projection: 'EPSG:3857'
+          });
+          geolocation.setTracking(true);
+          geolocation.on('change', function() {
+          geolocation.setTracking(false);
+          olMap.getView().fitGeometry(geolocation.getAccuracyGeometry(), olMap.getSize(), { nearest: true, maxZoom: 19 });
+          marker.setGeometry(new ol.geom.Point(olMap.getView().getCenter()));
+          //console.log("Accuracy of Geometry: " + geolocation.getAccuracy() + " meters");
+          });
+      } 
+      
 var carsharing = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
   url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Carsharing&maxFeatures=50&outputFormat=json',
