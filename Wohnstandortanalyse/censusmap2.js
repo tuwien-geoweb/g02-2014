@@ -123,8 +123,7 @@ var Carsharing = new ol.layer.Vector({
   url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Carsharing&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
- style: new ol.style.Style(({
-        scale: 0.5),
+ style: new ol.style.Style({
        image: new ol.style.Icon({
           src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_carsharing/carsharing.png'})
     })
