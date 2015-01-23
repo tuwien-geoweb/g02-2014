@@ -153,27 +153,3 @@ document.getElementById('Haltestellen').onclick = function(e){
     olMap.removeLayer(Haltestellen);
   }
 };
-
-var Radwege = new ol.layer.Vector({
-  source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=500&outputFormat=json',
-  projection: 'EPSG:3857'
-}),
-style: new ol.style.Style({
-       image: new ol.style.Icon({
-          src: 'https://cloud.githubusercontent.com/assets/9718782/5702714/70cb2674-9a5d-11e4-9465-11cbfc8fe7b9.png',
-    })
-}); 
-
-document.getElementById('Radwege').onclick = function(e){
-  if(this.checked==1){
-    olMap.addLayer(Radwege);
-  }else{
-    olMap.removeLayer(Radwege);
-  }
-};
- 
- 
- 
- 
-       
