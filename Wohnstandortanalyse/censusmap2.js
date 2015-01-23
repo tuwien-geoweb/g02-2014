@@ -124,9 +124,7 @@ var Haltestellen = new ol.layer.Vector({
 }),
  style: new ol.style.Style({
        image: new ol.style.Icon({
-          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_haltestellen/haltestellen.png', scale:0.5,
-        })
-      
+          src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_haltestellen/haltestellen.png', scale:0.5})
     })
 }); 
 
