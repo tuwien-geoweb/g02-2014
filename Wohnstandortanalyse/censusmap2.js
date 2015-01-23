@@ -138,7 +138,7 @@ document.getElementById('Carsharing').onclick = function(e){
 
 var Haltestellen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Haltestellen&maxFeatures=50&outputFormat=json',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Haltestellen&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
