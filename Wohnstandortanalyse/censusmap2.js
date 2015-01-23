@@ -153,3 +153,11 @@ document.getElementById('Haltestellen').onclick = function(e){
     olMap.removeLayer(Haltestellen);
   }
 };
+
+ style: new ol.style.Style({
+       image: new ol.style.Icon({
+          src: 'https://cloud.githubusercontent.com/assets/9718782/5702714/70cb2674-9a5d-11e4-9465-11cbfc8fe7b9.png',
+        })
+      
+    })
+}); 
