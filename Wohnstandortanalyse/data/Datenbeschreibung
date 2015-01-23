@@ -1,14 +1,10 @@
 Wohnstandortanalyse nach Bezirken
-AGE_00_14           Altersklasse bis 14-Jährige
-AGE_15_24           Altersklasse 15- bis 24-Jährige
-AGE_25_59           Altersklasse 29- bis 59-Jährige 
-AGE_60PLUS          Altersklasse ab 60-Jährige
-DISTRICT_POP_RATIO  Anteil der Bezirksbevölkerung an der Gesamtbevölkerung
-POP_DENSITY         Einwohnerdichte
+POP_TOTAL           Einwohner gesamt
+POP_DENSI           Einwohnerdichte
 RATE_M              Anteil der männlichen Einwohner
-RATE_F              Anteil der weiblichen Einwohnerinnen
-RATE_FOR_NATIONAL   Anteil der EinwohnerInnen mit fremder Staatsangehörigkeit
-RATE_FOR_BORN       Anteil der nicht in Österreich geborenen EinwohnerInnen
-RATE_MIG_BACKGROUND Anteil der EinwohnerInnen mit Migrationshintergrund
-AVERAGE_AGE_M       Durchschnittsalter der Männer
-AVERAGE_AGE_F       Durchschnittsalter der Frauen
+RATE_W              Anteil der weiblichen Einwohnerinnen
+AVG_AGE_M           Durchschnittliches Alter Männer
+AVG_AGE_W           Durchschnittliches Alter Männer
+YOU_RATIO           Anteil Personen bis 19 Jahre
+AGE_RATIO           Anteil Personen ab 65 Jahren
+BEZI_LAGE           Zentrale/Periphere Lage
