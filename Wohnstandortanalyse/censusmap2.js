@@ -117,7 +117,7 @@ form.onsubmit = function(evt) {
       } 
       
 //Variablen laden
-var haltestellen = new ol.layer.Vector({
+var Haltestellen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
   url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Haltestellen&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
@@ -130,10 +130,10 @@ var haltestellen = new ol.layer.Vector({
     })
 }); 
 
-document.getElementById('haltestellen').onclick = function(e){
+document.getElementById('Haltestellen').onclick = function(e){
   if(this.checked==1){
-    olMap.addLayer(haltestellen);
+    olMap.addLayer(Haltestellen);
   }else{
-    olMap.removeLayer(haltestellen);
+    olMap.removeLayer(Haltestellen);
   }
 };
