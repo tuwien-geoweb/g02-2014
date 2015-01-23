@@ -138,7 +138,7 @@ document.getElementById('Haltestellen').onclick = function(e){
 
 var Carsharing = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/wms?service=WMS&version=1.1.0&request=GetMap&layers=g02_2014:g02_2014_Carsharing&styles=&bbox=16.262093709843676,48.13533045376369,16.441084856258374,48.25803479566444&width=512&height=350&srs=EPSG:4326&format=application/openlayers',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_2014_Carsharing&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -157,7 +157,7 @@ document.getElementById('Carsharing').onclick = function(e){
 
 var Hundezonen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/wms?service=WMS&version=1.1.0&request=GetMap&layers=g02_2014:g02_Hundezonen&styles=&bbox=16.241354614625287,48.1223827666496,16.514329717714947,48.28713842899952&width=546&height=330&srs=EPSG:4326&format=application/openlayers',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Hundezonen&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -176,7 +176,7 @@ document.getElementById('Hundezonen').onclick = function(e){
 
 var Radwege = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/wms?service=WMS&version=1.1.0&request=GetMap&layers=g02_2014:g02_Radwege&styles=&bbox=16.18812651333765,48.12028758958727,16.576654249812677,48.320869521235515&width=639&height=330&srs=EPSG:4326&format=application/openlayers',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
@@ -195,7 +195,7 @@ document.getElementById('Radwege').onclick = function(e){
 
 var Bezirksgrenzen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/wms?service=WMS&version=1.1.0&request=GetMap&layers=g02_2014:g02_Bezirksgrenzen1&styles=&bbox=16.181822542508847,48.11789767624906,16.577504331553047,48.32266000349662&width=637&height=330&srs=EPSG:4326&format=application/openlayers',
+  url: 'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Bezirksgrenzen1&maxFeatures=50&outputFormat=json',
   projection: 'EPSG:3857'
 }),
 
