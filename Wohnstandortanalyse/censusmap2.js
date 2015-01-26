@@ -142,7 +142,7 @@ var Carsharing = new ol.layer.Vector({
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
-       image: new ol.style.Icon({src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_carsharing/carsharing.png', scale: 0.2 })
+       image: new ol.style.Icon({src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_carsharing/carsharing.png', scale: 0.1 })
     })
 }); 
 
