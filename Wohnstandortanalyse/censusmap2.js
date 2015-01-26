@@ -133,9 +133,11 @@ document.getElementById('Bezirksgrenzen').onclick = function(e){
   }
 };
  
+ 
+ 
  var Radwege = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=50000&outputFormat=json',
+  url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=5000&outputFormat=json',
   projection: 'EPSG:3857'
   }),
 }); 
@@ -148,13 +150,15 @@ document.getElementById('Radwege').onclick = function(e){
   }
 };
  
+ 
+ 
 var Hundezonen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
   url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Hundezonen&maxFeatures=500&outputFormat=json',
   projection: 'EPSG:3857'
 }),
  style: new ol.style.Style({
-       image: new ol.style.Icon({src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_hundezonen/Dog.png', scale: 0.1})
+       image: new ol.style.Icon({src: 'http://student.ifip.tuwien.ac.at/geoweb/2014/g02/Datensaetze/g02_hundezonen/Dog.png', scale: 0.2})
     })
 }); 
 
