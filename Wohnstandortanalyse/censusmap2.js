@@ -118,6 +118,21 @@ form.onsubmit = function(evt) {
       
       
  //Variablen laden
+ var Radwege = new ol.layer.Vector({
+  source: new ol.source.GeoJSON({
+  url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=500&outputFormat=json',
+  projection: 'EPSG:3857'
+  }),
+}); 
+
+document.getElementById('Radwege').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(Radwege);
+  }else{
+    olMap.removeLayer(Radwege);
+  }
+};
+ 
 var Hundezonen = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
   url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Hundezonen&maxFeatures=500&outputFormat=json',
