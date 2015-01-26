@@ -118,9 +118,24 @@ form.onsubmit = function(evt) {
       
       
  //Variablen laden
+  var Bezirksgrenzen = new ol.layer.Vector({
+  source: new ol.source.GeoJSON({
+  url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Bezirksgrenzen&maxFeatures=5000&outputFormat=json',
+  projection: 'EPSG:3857'
+  }),
+}); 
+
+document.getElementById('Bezirksgrenzen').onclick = function(e){
+  if(this.checked==1){
+    olMap.addLayer(Bezirksgrenzen);
+  }else{
+    olMap.removeLayer(Bezirksgrenzen);
+  }
+};
+ 
  var Radwege = new ol.layer.Vector({
   source: new ol.source.GeoJSON({
-  url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=500&outputFormat=json',
+  url:'http://student.ifip.tuwien.ac.at/geoserver/g02_2014/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=g02_2014:g02_Radwege&maxFeatures=50000&outputFormat=json',
   projection: 'EPSG:3857'
   }),
 }); 
